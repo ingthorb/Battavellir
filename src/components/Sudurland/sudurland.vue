@@ -1,6 +1,6 @@
 <template>
   <div class="Sparkvellir">
-  <h1>{{msg}}</h1>
+  <h1>{{$t('message.southern_iceland')}}</h1>
     <div>
       <ul class="list-unstyled">
         <li v-for="vollur in vellir"> {{vollur}} </li>

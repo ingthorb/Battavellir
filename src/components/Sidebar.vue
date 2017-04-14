@@ -10,7 +10,7 @@
               :to="'/' + routes[i]">
               <a class="nav-link"
                   :class="{ active: selectedOption === option }">
-                  {{ option }}
+                  {{$t(`message.${option}`)}}
               </a>
         </router-link>
       </ul>
@@ -26,7 +26,7 @@ export default {
       active: false,
       activeTown: '',
       selectedOption: '',
-      lond: ['Austurland', 'Höfuðborgarsvæðið', 'Norðurland', 'Suðurland', 'Vesturland'],
+      lond: ['eastern_iceland', 'capital_iceland', 'northern_iceland', 'southern_iceland', 'western_iceland'],
       routes: ['austurland', 'hofudborgin', 'nordurland', 'sudurland', 'vesturland'],
       sudurland: ['Árborg', 'Bláskógabyggð', 'Grímsnes og Grafningshreppur', 'Hrunamannahreppur Flúðir', 'Hveragerði', 'Mýrdalshreppur', 'Hvolsvöllur', 'Hella', 'Laugalandsskóli', 'Kirkjubær', 'Skeiða- og Gnúpverjahreppur', 'Vestmannaeyjar', 'Villingaholtshreppur'],
       vesturland: ['Bolungarvík', 'Bæjarhreppur', 'Ísafjörður', 'Reykólahreppur', 'Strandabyggð', 'Tálknafjarðarhreppur', 'Vesturbyggð', 'Akranes', 'Bifröst', 'Borgarnes', 'Hvanneyri', 'Búðardal', 'Eyja- og Miklaholtshreppur', 'Grundarfjarðarbær', 'Snæfellsbær', 'Stykkishólmur'],

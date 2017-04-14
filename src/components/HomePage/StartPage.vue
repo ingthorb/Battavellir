@@ -1,12 +1,16 @@
 <template>
   <div class="Sparkvellir">
-    <h1>{{ msg }}</h1>
+    <div class="text-center">
+    <h1>{{$t("message.welcome_headline")}}</h1>
+    <h3>{{$t("message.welcome_message")}}</h3>
     <template>
+      <div class="container container-table">
+        <div class="row vertical-center-row">
+          <div class="col-md-3 col-md-offset-2">
       <gmap-map
         :center="center"
-        :zoom="7"
-        style="width: 500px; height: 300px"
-        id="maps"
+        :zoom="6"
+        style="width: 650px; height: 400px"
       >
         <gmap-marker
           v-for="m in markers"
@@ -16,7 +20,11 @@
           @click="center=m.position"
         ></gmap-marker>
       </gmap-map>
+          </div>
+          </div>
+      </div>
     </template>
+      </div>
   </div>
 </template>
 
@@ -36,7 +44,7 @@
     data () {
       return {
         msg: 'Sparkvellir á Íslandi',
-        center: {lat: 64.200520, lng: -21.888350},
+        center: {lat: 65.000520, lng: -19.088350},
         markers: [{
           // Austurland
           // Grunnskoli Borgarfjardar
@@ -268,6 +276,227 @@
         {
           // Floaskoli
           position: {lat: 63.879842, lng: -20.753701}
+        },
+        {        // hofuðborgarsvæðið
+
+          // Álftanesskóli
+          position: {lat: 64.104646, lng: -22.017081}
+        },
+        {
+          // Sjálandsskóli
+          position: {lat: 64.092948, lng: -21.936721}
+        },
+        {
+          // Setbergsskóli
+          position: {lat: 64.065323, lng: -21.931424}
+        },
+        {
+          // Víðistaðaskóli
+          position: {lat: 64.075251, lng: -21.957850}
+        },
+        {
+          // Öldutúnsskóli
+          position: {lat: 64.062701, lng: -21.946441}
+        },
+        {
+          // Flensborgarskól
+          position: {lat: 64.093169, lng: -21.908021}
+        },
+        {
+          // Digranesskóli
+          position: {lat: 64.110799, lng: -21.863081}
+        },
+        {
+          // Hjallaskóli
+          position: {lat: 64.110616, lng: -21.864676}
+        },
+        {
+          // Kársnesskóli
+          position: {lat: 64.109452, lng: -21.922667}
+        },
+        {
+          // Kópavogsskóli
+          position: {lat: 64.110900, lng: -21.900555}
+        },
+        {
+          // Lindaskóli
+          position: {lat: 64.099336, lng: -21.868094}
+        },
+        {
+          // Salaskóli
+          position: {lat: 64.090838, lng: -21.855459}
+        },
+        {
+          // Smáraskóli
+          position: {lat: 64.102958, lng: -21.895656}
+        },
+        {
+          // Snælandsskóli
+          position: {lat: 64.115765, lng: -21.878175}
+        },
+        {
+          // Vatnsendaskóli
+          position: {lat: 64.089093, lng: -21.805284}
+        },
+        {
+          // Lágafellsskóli
+          position: {lat: 64.165968, lng: -21.724306}
+        },
+        {
+          // Ártúnsskóli
+          position: {lat: 64.120040, lng: -21.821488}
+        },
+        {
+          // Breiðholtsskóli
+          position: {lat: 64.107254, lng: -21.835198}
+        },
+        {
+          // Hamraskóli
+          position: {lat: 64.137994, lng: -21.812881}
+        },
+        {
+          // Hlíðaskóli
+          position: {lat: 64.130927, lng: -21.910084}
+        },
+        {
+          // Hólabrekkuskóli
+          position: {lat: 64.107200, lng: -21.818239}
+        },
+        {
+          // Klébergsskóli
+          position: {lat: 64.237371, lng: -21.825685}
+        },
+        {
+          // Korpuskóli
+          position: {lat: 64.156445, lng: -21.755219}
+        },
+        {
+          // Langholtsskóli
+          position: {lat: 64.138261, lng: -21.861127}
+        },
+        {
+          // Laugarnesskóli
+          position: {lat: 64.144834, lng: -21.884109}
+        },
+        {
+          // Seljaskóli
+          position: {lat: 64.095118, lng: -21.839311}
+        },
+        {
+          // Hofgarða
+          position: {lat: 64.157233, lng: -22.000731}
+        },
+        {
+          // Akureyri Brekkuskóli
+          position: {lat: 65.678624, lng: -18.095476}
+        },
+        {
+          // Akureyri Giljaskóli
+          position: {lat: 65.686172, lng: -18.134628}
+        },
+        {
+          // Akureyri Glerárskóli
+          position: {lat: 65.689034, lng: -18.116745}
+        },
+        {
+          // Akureyri Lundarskóli
+          position: {lat: 65.675611, lng: -18.114134}
+        },
+        {
+          // Akureyri Naustaskóli
+          position: {lat: 65.665011, lng: -18.098491}
+        },
+        {
+          // Akureyri Oddeyrarskóli
+          position: {lat: 65.689019, lng: -18.092761}
+        },
+        {
+          // Akureyri Síðuskóli
+          position: {lat: 65.692802, lng: -18.137171}
+        },
+        {
+          // Þelamerkurskóli
+          position: {lat: 65.742877, lng: -18.277477}
+        },
+        {
+          // Dalvíkurskóla
+          position: {lat: 65.968709, lng: -18.530033}
+        },
+        {
+          // Siglufirði
+          position: {lat: 66.150349, lng: -18.905393}
+        },
+        {
+          // Grenivíkurskóli
+          position: {lat: 65.948787, lng: -18.172403}
+        },
+        {
+          // Borgarhólsskóli
+          position: {lat: 66.045480, lng: -17.336927}
+        },
+        {
+          // Ólafsfjörður
+          position: {lat: 66.070314, lng: -18.652770}
+        },
+        {
+          // Skútustaðahreppur
+          position: {lat: 65.642426, lng: -16.894967}
+        },
+        {
+          // Svalbarðsstrandarhreppur
+          position: {lat: 65.748861, lng: -18.081112}
+        },
+        {
+          // Þórshafnarhreppur
+          position: {lat: 66.201671, lng: -15.338072}
+        },
+        {
+          // Blönduós
+          position: {lat: 65.659228, lng: -20.281708}
+        },
+        {
+          // Húnavallaskóli
+          position: {lat: 65.540968, lng: -20.207562}
+        },
+        {
+          // Grunnsk. Húnaþ.v og Hvammst.
+          position: {lat: 65.399613, lng: -20.942106}
+        },
+        {
+          // Grunnsk. íþróttah. Skagaströnd
+          position: {lat: 65.824389, lng: -20.303919}
+        },
+        {
+          // Grunnsk. Hofsósi
+          position: {lat: 65.897699, lng: -19.409377}
+        },
+        {
+          // Hólar
+          position: {lat: 65.733512, lng: -19.113186}
+        },
+        {
+          // Varmahlíðarskóli
+          position: {lat: 65.550999, lng: -19.447991}
+        },
+        {
+          // Gerðarskóli
+          position: {lat: 64.072235, lng: -22.652158}
+        },
+        {
+          // Grunnsk. Grindavíkur
+          position: {lat: 63.840117, lng: -22.439947}
+        },
+        {
+          // Akurskóli reykjanesbær
+          position: {lat: 63.974906, lng: -22.513036}
+        },
+        {
+          // Grunnskólinn Sandgerði
+          position: {lat: 64.034041, lng: -22.699082}
+        },
+        {
+          // Grunnskólinn Vogum
+          position: {lat: 63.982778, lng: -22.387479}
         }
         ]
       }
@@ -282,13 +511,16 @@
   }
 
   #maps {
-    left: 250px;
-    top: 250px;
+    margin-left: 250px;
+    margin-top: auto;
     position: absolute;
   }
 
   p {
     text-align: center;
   }
-
+#inner {
+  width: 50%;
+  margin: 0 auto;
+}
 </style>
